@@ -31,7 +31,6 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   arr.push(value);
-  console.log(arr);
 };
 
 const addNumbers = (num, arr, times, callback) => {
@@ -55,13 +54,28 @@ The inventory is formatted like this:
   { name: 'blueberries', available: false }
 ]
 
-This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
+This function should use forEach to populate your grocery list based on the store's inventory.
+If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  const inventory = [];
+
+  availableItems.forEach(item => {
+    if (item.available) {
+      inventory.push(item.name);
+    }
+  });
+  return inventory;
 };
 
+
+
+//   test('It should only add the available items to the list', () => {
+//     expect(createList(inventory)).toStrictEqual(['apples', 'pears', 'bananas']);
+//     expect(createList(inventory).length).toStrictEqual(3);
+//   });
+// });
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -76,8 +90,22 @@ Iterate over the array using forEach to determine the output based on several ru
 Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
+
+
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  let outputArray = [];
+  arr.forEach(number => {
+    if (number % 3 === 0 && number % 5 === 0) {
+      outputArray.push('Fizz Buzz');
+    } else if (number % 5 === 0) {
+      outputArray.push('Buzz');
+    } else if (number % 3 === 0) {
+      outputArray.push('Fizz');
+    } else {
+      outputArray.push(number);
+    }
+  })
+  return outputArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
