@@ -69,13 +69,6 @@ const createList = (availableItems) => {
   return inventory;
 };
 
-
-
-//   test('It should only add the available items to the list', () => {
-//     expect(createList(inventory)).toStrictEqual(['apples', 'pears', 'bananas']);
-//     expect(createList(inventory).length).toStrictEqual(3);
-//   });
-// });
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
