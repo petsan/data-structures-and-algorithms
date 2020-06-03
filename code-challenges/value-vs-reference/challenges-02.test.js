@@ -16,10 +16,9 @@ const raisedToTheThird = (arr) => {
 
   let resultArr = [];
 
-  for (var i; i < arr.length; i++) {
-    let result = i*i*i;
-    resultArr.push(result);
-  }
+  arr.forEach(i => {
+    resultArr.push(i*i*i);
+  });
   return resultArr;
 }
 
@@ -31,11 +30,7 @@ The original source string should not be modified.
 
 ------------------------------------------------------------------------------------------------ */
 
-const appendTheEnd = (str) => {
-  let newString;
-  str += newString;
-  return newString;
-};
+const appendTheEnd = (str) => `${str} The end.`;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -74,10 +69,7 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
 
 const addBirthYearProperty = (obj, year) => {
-  const a = { fullName: 'Octavia Butler' };
-  addBirthYearProperty(a, 1947);
-
-  expect(a.yearBorn).toStrictEqual(1947);
+  obj.yearBorn = year;
 };
 
 
