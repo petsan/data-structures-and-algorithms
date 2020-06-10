@@ -20,13 +20,15 @@ let $ = createSnippetWithJQuery(`
 `);
 
 const addTea = () => {
-  // Solution code here...
+  $('ul').append('<li>tea</li>');
 }
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named forLoopTwoToThe that, given an array of integers as input, iterates over the array and returns a new array. The returned array should contain the result of raising 2 to the power of the original input element.
+Write a function named forLoopTwoToThe that, given an array of integers as input,
+iterates over the array and returns a new array. The returned array should contain
+the result of raising 2 to the power of the original input element.
 
 You may choose to complete this challenge using a for loop, for...in syntax, or for...of syntax.
 
@@ -34,7 +36,11 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
-  // Solution code here...
+  let squares = [];
+  for (let value of arr){
+    squares.push(Math.pow(2, value));
+  }
+  return squares;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,17 +50,23 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  // Solution code here...
+  let squares = [];
+  arr.forEach(value => {
+    squares.push(Math.pow(2, value));
+  })
+  return squares;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named mapTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 1 and your forEachTwoToThe function from challenge 2, but uses map instead of a for loop or forEach.
+Write a function named mapTwoToThe that produces the same output as your
+forLoopTwoToThe function from challenge 1 and your forEachTwoToThe function
+from challenge 2, but uses map instead of a for loop or forEach.
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  // Solution code here...
+  return arr.map(value => {return value = Math.pow(2, value);})
 };
 
 /* ------------------------------------------------------------------------------------------------
