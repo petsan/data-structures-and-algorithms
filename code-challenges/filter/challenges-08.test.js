@@ -58,8 +58,7 @@ const filterStringsWithVowels = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named notInFirstArray that,
-given two arrays as input,
+Write a function named notInFirstArray that, given two arrays as input,
 uses filter to return an array of all the elements
 in the second array that are not included in the first array.
 
