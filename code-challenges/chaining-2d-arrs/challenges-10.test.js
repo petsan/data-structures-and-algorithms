@@ -32,7 +32,26 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  // Solution code here...
+  if (input === []) {
+    return 0;
+  }
+
+  let totalInts = input.reduce((totalInts, subArr) => {
+    if (subArr === []) {
+      return 0;
+    }
+
+    let intCounter = subArr.reduce((intCounter, value) => {
+      if (target === value) {
+        intCounter++;
+      }
+      return intCounter;
+    }, 0);
+
+    return totalInts += intCounter;
+  }, 0);
+
+  return totalInts
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -58,7 +77,6 @@ const totalSum = (input) => {
 
     totalSum += runningSum;
     return totalSum;
-
   }, 0);
 
   return totalSum;
