@@ -10,26 +10,24 @@ All other routes should respond with a status of 404.
 ------------------------------------------------------------------------------------------------ */
 
 const createServer = () => {
-  // const express = require('express');
-  // // const cors = require('cors');
-  // const app = express();
+  const express = require('express');
+  const app = express();
 
-  // // app.use(cors());
-  // app.get('/hello', (req, res) => {
-  //   res.status(200).send('hello')
-  // })
+  app.get('/hello', (req, res) => {
+    res.status(200).send('hello')
+  })
 
-  // app.get('/aboutme', (req, res) => {
-  //   res.status(200).send('I live in Seattle')
-  // })
+  app.get('/aboutme', (req, res) => {
+    res.status(200).send('I live in Seattle')
+  })
 
-  // app.get('/favoritefoods', (req, res) => {
-  //   res.status(200).send(['prierogi', 'pad kee mau', 'sushi'])
-  // })
+  app.get('/favoritefoods', (req, res) => {
+    res.status(200).send(['prierogi', 'pad kee mau', 'sushi'])
+  })
 
-  // app.get('*', (req, res) => {
-  //   res.status(404).send('4040404040404')
-  // })
+  app.get('*', (req, res) => {
+    res.status(404).send('4040404040404')
+  })
 
   var server = app.listen(3301, function () {
     var port = server.address().port;
