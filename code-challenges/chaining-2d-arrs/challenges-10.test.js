@@ -9,6 +9,11 @@ connect a '/favoritefoods' route that sends an array to the front-end of your fa
 All other routes should respond with a status of 404.
 ------------------------------------------------------------------------------------------------ */
 
+// write a function that is given an array of objects to find the shortest name
+
+two words
+one word names
+
 const createServer = () => {
   const express = require('express');
   const app = express();
